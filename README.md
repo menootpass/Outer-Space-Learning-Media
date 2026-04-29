@@ -1,0 +1,2 @@
+# Outer Space Learning Media
+This is my final project for earth and space science education course, i use godot engine to create simulation of the outer space and i currently work on. My purpose in making this is hoping it can be used for further development with holograms or virtual reality, because I made it interactive so that students can explore more with this simulation. Because many still find it difficult to directly understand how the solar system works. 
