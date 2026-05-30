@@ -37,7 +37,37 @@ albedo_texture = ExtResource("4_l4fs0")
 shading_mode = 0
 albedo_texture = ExtResource("6_mdg6p")
 
-[sub_resource type="BoxMesh" id="BoxMesh_ucfnn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32nk2"]
+shading_mode = 0
+albedo_texture = ExtResource("8_332ek")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1nu12"]
+shading_mode = 0
+albedo_texture = ExtResource("10_xi18f")
+
+[sub_resource type="SphereMesh" id="SphereMesh_n8y48"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dej6"]
+shading_mode = 0
+albedo_texture = ExtResource("12_djfgs")
+
+[sub_resource type="TorusMesh" id="TorusMesh_cwodp"]
+uv2_padding = 1.87
+inner_radius = 0.597
+outer_radius = 0.448
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eeb60"]
+albedo_texture = ExtResource("7_54xoc")
+
+[sub_resource type="SphereMesh" id="SphereMesh_coxvp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0b0ps"]
+shading_mode = 0
+albedo_texture = ExtResource("15_3f0ig")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a8ak2"]
+shading_mode = 0
+albedo_texture = ExtResource("14_iar8a")
 
 [sub_resource type="TorusMesh" id="TorusMesh_nv2gv"]
 inner_radius = 1.274
@@ -79,38 +109,6 @@ inner_radius = 13.316
 outer_radius = 13.317
 rings = 128
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32nk2"]
-shading_mode = 0
-albedo_texture = ExtResource("8_332ek")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1nu12"]
-shading_mode = 0
-albedo_texture = ExtResource("10_xi18f")
-
-[sub_resource type="SphereMesh" id="SphereMesh_n8y48"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dej6"]
-shading_mode = 0
-albedo_texture = ExtResource("12_djfgs")
-
-[sub_resource type="TorusMesh" id="TorusMesh_cwodp"]
-uv2_padding = 1.87
-inner_radius = 0.597
-outer_radius = 0.448
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eeb60"]
-albedo_texture = ExtResource("7_54xoc")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a8ak2"]
-shading_mode = 0
-albedo_texture = ExtResource("14_iar8a")
-
-[sub_resource type="SphereMesh" id="SphereMesh_coxvp"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0b0ps"]
-shading_mode = 0
-albedo_texture = ExtResource("15_3f0ig")
-
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_p4m36"]
 panorama = ExtResource("5_nv2gv")
 
@@ -121,15 +119,88 @@ sky_material = SubResource("PanoramaSkyMaterial_p4m36")
 background_mode = 2
 sky = SubResource("Sky_163i1")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_332ek"]
+bg_color = Color(0.6, 0.9882353, 0.16078432, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xi18f"]
+bg_color = Color(0.6, 0.9882353, 0.16078432, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djfgs"]
+bg_color = Color(0.6, 0.9882353, 0.16078432, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iar8a"]
+bg_color = Color(0.6, 0.9882353, 0.16078432, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3f0ig"]
+bg_color = Color(0.6, 0.9882353, 0.16078432, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2vw66"]
+bg_color = Color(0.6, 0.9882353, 0.16078432, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_32nk2"]
+bg_color = Color(0.6, 0.9882353, 0.16078432, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nu12"]
+bg_color = Color(0.6, 0.9882353, 0.16078432, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2dej6"]
+bg_color = Color(0.6, 0.9882353, 0.16078432, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
 [node name="TataSurya" type="Node3D" unique_id=379286333]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1978845750]
 transform = Transform3D(1, 0, 0, 0, 0.029299825, 0.99957067, 0, -0.99957067, 0.029299825, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1968281049]
+unique_name_in_owner = true
 transform = Transform3D(-0.029300874, -0.04808268, 0.9984135, -0.0014104954, 0.9988434, 0.048062027, -0.99956965, 1.0853074e-10, -0.029334802, 37.207966, 0.3305149, -0.48034716)
 
 [node name="Matahari" type="MeshInstance3D" parent="." unique_id=1748571442]
+unique_name_in_owner = true
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 mesh = SubResource("SphereMesh_ucfnn")
 surface_material_override/0 = SubResource("StandardMaterial3D_n8y48")
@@ -138,6 +209,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_n8y48")
 script = ExtResource("1_tyu7q")
 
 [node name="Bumi" type="MeshInstance3D" parent="Matahari/Pivot_Bumi" unique_id=1609514417]
+unique_name_in_owner = true
 transform = Transform3D(0.046, 0, 0, 0, 0.046, 0, 0, 0, 0.046, 0, 0, 3.378507)
 mesh = SubResource("SphereMesh_n1khs")
 surface_material_override/0 = SubResource("StandardMaterial3D_2vw66")
@@ -146,6 +218,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_2vw66")
 script = ExtResource("2_n1khs")
 
 [node name="Merkurius" type="MeshInstance3D" parent="Matahari/Pivot_Merkurius" unique_id=474299900]
+unique_name_in_owner = true
 transform = Transform3D(0.018, 0, 0, 0, 0.018, 0, 0, 0, 0.018, 0, 0, 1.2570301)
 mesh = SubResource("SphereMesh_n1khs")
 surface_material_override/0 = SubResource("StandardMaterial3D_cwodp")
@@ -154,17 +227,60 @@ surface_material_override/0 = SubResource("StandardMaterial3D_cwodp")
 script = ExtResource("3_ahgih")
 
 [node name="Venus" type="MeshInstance3D" parent="Matahari/Pivot_Venus" unique_id=1313834677]
+unique_name_in_owner = true
 transform = Transform3D(0.043, 0, 0, 0, 0.043, 0, 0, 0, 0.043, 0, 0, 2.3824685)
 mesh = SubResource("SphereMesh_n1khs")
 surface_material_override/0 = SubResource("StandardMaterial3D_jd4yk")
 
-[node name="PlanetDummy" type="Node3D" parent="Matahari" unique_id=1479107870]
-visible = false
+[node name="Pivot_Mars" type="Node3D" parent="Matahari" unique_id=1841511862]
+script = ExtResource("7_n8y48")
 
-[node name="Dummy" type="MeshInstance3D" parent="Matahari/PlanetDummy" unique_id=1643216055]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.0593505)
-visible = false
-mesh = SubResource("BoxMesh_ucfnn")
+[node name="Mars" type="MeshInstance3D" parent="Matahari/Pivot_Mars" unique_id=1134221195]
+unique_name_in_owner = true
+transform = Transform3D(0.024, 0, 0, 0, 0.024, 0, 0, 0, 0.024, 0, 0, 4.470587)
+mesh = SubResource("SphereMesh_n1khs")
+surface_material_override/0 = SubResource("StandardMaterial3D_32nk2")
+
+[node name="Pivot_Jupiter" type="Node3D" parent="Matahari" unique_id=642603515]
+script = ExtResource("8_cwodp")
+
+[node name="Jupiter" type="MeshInstance3D" parent="Matahari/Pivot_Jupiter" unique_id=1152073501]
+unique_name_in_owner = true
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -6.358978)
+mesh = SubResource("SphereMesh_n1khs")
+surface_material_override/0 = SubResource("StandardMaterial3D_1nu12")
+
+[node name="Pivot_Saturnus" type="Node3D" parent="Matahari" unique_id=1171482606]
+script = ExtResource("9_jd4yk")
+
+[node name="Saturnus" type="MeshInstance3D" parent="Matahari/Pivot_Saturnus" unique_id=34571825]
+unique_name_in_owner = true
+transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 0, -8.367846)
+mesh = SubResource("SphereMesh_n8y48")
+surface_material_override/0 = SubResource("StandardMaterial3D_2dej6")
+
+[node name="Cincin" type="MeshInstance3D" parent="Matahari/Pivot_Saturnus" unique_id=1829945958]
+transform = Transform3D(0.98059076, 0.035822477, -0.07975345, 0.19606596, -0.17916004, 0.39887348, 2.9802322e-08, -0.08135372, -0.91353124, 0, 0, -8.360241)
+mesh = SubResource("TorusMesh_cwodp")
+surface_material_override/0 = SubResource("StandardMaterial3D_eeb60")
+
+[node name="Pivot_Neptunus" type="Node3D" parent="Matahari" unique_id=250419048]
+script = ExtResource("8_cwodp")
+
+[node name="Neptunus" type="MeshInstance3D" parent="Matahari/Pivot_Neptunus" unique_id=627502075]
+unique_name_in_owner = true
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, -13.254888)
+mesh = SubResource("SphereMesh_coxvp")
+surface_material_override/0 = SubResource("StandardMaterial3D_0b0ps")
+
+[node name="Pivot_Uranus" type="Node3D" parent="Matahari" unique_id=1208975995]
+script = ExtResource("8_cwodp")
+
+[node name="Uranus" type="MeshInstance3D" parent="Matahari/Pivot_Uranus" unique_id=11293419]
+unique_name_in_owner = true
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, -11.061305)
+mesh = SubResource("SphereMesh_n1khs")
+surface_material_override/0 = SubResource("StandardMaterial3D_a8ak2")
 
 [node name="Orbit" type="MeshInstance3D" parent="Matahari" unique_id=1321786308]
 mesh = SubResource("TorusMesh_nv2gv")
@@ -190,53 +306,90 @@ mesh = SubResource("TorusMesh_mdg6p")
 [node name="Orbit8" type="MeshInstance3D" parent="Matahari" unique_id=219037459]
 mesh = SubResource("TorusMesh_54xoc")
 
-[node name="Pivot_Mars" type="Node3D" parent="Matahari" unique_id=1841511862]
-script = ExtResource("7_n8y48")
-
-[node name="Mars" type="MeshInstance3D" parent="Matahari/Pivot_Mars" unique_id=1134221195]
-transform = Transform3D(0.024, 0, 0, 0, 0.024, 0, 0, 0, 0.024, 0, 0, 4.470587)
-mesh = SubResource("SphereMesh_n1khs")
-surface_material_override/0 = SubResource("StandardMaterial3D_32nk2")
-
-[node name="Pivot_Jupiter" type="Node3D" parent="Matahari" unique_id=642603515]
-script = ExtResource("8_cwodp")
-
-[node name="Jupiter" type="MeshInstance3D" parent="Matahari/Pivot_Jupiter" unique_id=1152073501]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -6.358978)
-mesh = SubResource("SphereMesh_n1khs")
-surface_material_override/0 = SubResource("StandardMaterial3D_1nu12")
-
-[node name="Pivot_Saturnus" type="Node3D" parent="Matahari" unique_id=1171482606]
-script = ExtResource("9_jd4yk")
-
-[node name="Saturnus" type="MeshInstance3D" parent="Matahari/Pivot_Saturnus" unique_id=34571825]
-transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 0, -8.367846)
-mesh = SubResource("SphereMesh_n8y48")
-surface_material_override/0 = SubResource("StandardMaterial3D_2dej6")
-
-[node name="Cincin" type="MeshInstance3D" parent="Matahari/Pivot_Saturnus" unique_id=1829945958]
-transform = Transform3D(0.98059076, 0.035822477, -0.07975345, 0.19606596, -0.17916004, 0.39887348, 2.9802322e-08, -0.08135372, -0.91353124, 0, 0, -8.360241)
-mesh = SubResource("TorusMesh_cwodp")
-surface_material_override/0 = SubResource("StandardMaterial3D_eeb60")
-
-[node name="Pivot_Uranus" type="Node3D" parent="Matahari" unique_id=1208975995]
-script = ExtResource("8_cwodp")
-
-[node name="Uranus" type="MeshInstance3D" parent="Matahari/Pivot_Uranus" unique_id=11293419]
-transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, -11.061305)
-mesh = SubResource("SphereMesh_n1khs")
-surface_material_override/0 = SubResource("StandardMaterial3D_a8ak2")
-
-[node name="Pivot_Neptunus" type="Node3D" parent="Matahari" unique_id=250419048]
-script = ExtResource("8_cwodp")
-
-[node name="Neptunus" type="MeshInstance3D" parent="Matahari/Pivot_Neptunus" unique_id=627502075]
-transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, -13.254888)
-mesh = SubResource("SphereMesh_coxvp")
-surface_material_override/0 = SubResource("StandardMaterial3D_0b0ps")
-
 [node name="PenerimaData" type="Node" parent="." unique_id=1826152362]
 script = ExtResource("2_ucfnn")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=463316612]
 environment = SubResource("Environment_3nioj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=467752821]
+
+[node name="KotakMenu" type="Panel" parent="CanvasLayer" unique_id=1114324844]
+offset_right = 334.0
+offset_bottom = 646.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/KotakMenu" unique_id=501613339]
+layout_mode = 0
+offset_right = 334.0
+offset_bottom = 311.0
+
+[node name="SunButton" type="Button" parent="CanvasLayer/KotakMenu/VBoxContainer" unique_id=1678335184]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_332ek")
+text = "Matahari"
+
+[node name="MerkuriusButton" type="Button" parent="CanvasLayer/KotakMenu/VBoxContainer" unique_id=253886154]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_xi18f")
+text = "Merkurius"
+
+[node name="VenusButton" type="Button" parent="CanvasLayer/KotakMenu/VBoxContainer" unique_id=1469641409]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_djfgs")
+text = "Venus"
+
+[node name="BumiButton" type="Button" parent="CanvasLayer/KotakMenu/VBoxContainer" unique_id=456821287]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_iar8a")
+text = "Bumi"
+
+[node name="MarsButton" type="Button" parent="CanvasLayer/KotakMenu/VBoxContainer" unique_id=1027259107]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_3f0ig")
+text = "Mars"
+
+[node name="JupiterButton" type="Button" parent="CanvasLayer/KotakMenu/VBoxContainer" unique_id=1697925229]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_2vw66")
+text = "Jupiter"
+
+[node name="SaturnusButton" type="Button" parent="CanvasLayer/KotakMenu/VBoxContainer" unique_id=878462201]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_32nk2")
+text = "Saturnus"
+
+[node name="UranusButton" type="Button" parent="CanvasLayer/KotakMenu/VBoxContainer" unique_id=736801324]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_1nu12")
+text = "Uranus"
+
+[node name="NeptunusButton" type="Button" parent="CanvasLayer/KotakMenu/VBoxContainer" unique_id=304205336]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_2dej6")
+text = "Neptunus"
+
+[node name="Kuis" type="Button" parent="CanvasLayer/KotakMenu/VBoxContainer" unique_id=1020096046]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_2dej6")
+text = "Kuis"
+
+[node name="PanelInfo" type="Panel" parent="CanvasLayer" unique_id=1749263445]
+visible = false
+offset_left = 672.0
+offset_top = -3.0
+offset_right = 1152.0
+offset_bottom = 647.0
+
+[node name="Judul" type="Label" parent="CanvasLayer/PanelInfo" unique_id=1846059456]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 19.0
+offset_right = 281.0
+offset_bottom = 42.0
+
+[node name="Deskripsi" type="RichTextLabel" parent="CanvasLayer/PanelInfo" unique_id=657315190]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 120.0
+offset_right = 386.0
+offset_bottom = 608.0

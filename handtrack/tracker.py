@@ -45,39 +45,62 @@ while True:
         data_tangan = {}
 
         # PASTIKAN kita juga membaca hand_world_landmarks untuk akurasi 3D
+        
         if results.hand_landmarks and results.handedness and results.hand_world_landmarks:
+            
             for hand_lms, world_lms, handedness in zip(results.hand_landmarks, results.hand_world_landmarks, results.handedness):
                 kategori = handedness[0].category_name
                 
+                # 1. RESET hitungan setiap ganti tangan/frame
+                count_fingers = 0 
+                
+                # 2. Tentukan jari mana saja yang terbuka (Telunjuk, Tengah, Manis, Kelingking)
                 jari_buka = [
-                    hand_lms[8].y < hand_lms[6].y,   
-                    hand_lms[12].y < hand_lms[10].y, 
-                    hand_lms[16].y < hand_lms[14].y, 
-                    hand_lms[20].y < hand_lms[18].y  
+                    hand_lms[8].y < hand_lms[6].y,   # Telunjuk
+                    hand_lms[12].y < hand_lms[10].y, # Tengah
+                    hand_lms[16].y < hand_lms[14].y, # Manis
+                    hand_lms[20].y < hand_lms[18].y  # Kelingking
                 ]
-                is_open = all(jari_buka)
+                
+                # 3. Hitung 4 jari tersebut
+                for j in jari_buka:
+                    if j: count_fingers += 1
+                
+                # 4. Logika Hitung Jempol (Berdasarkan Kanan/Kiri)
+                # Jempol terbuka jika ujung (4) lebih jauh ke samping daripada pangkal (2)
+                if kategori == "Right":
+                    if hand_lms[4].x < hand_lms[2].x: count_fingers += 1
+                else:
+                    if hand_lms[4].x > hand_lms[2].x: count_fingers += 1
 
-                # Posisi 2D untuk Zoom (tetap pakai hand_landmarks biasa)
+                # 5. Sekarang baru PRINT setelah dihitung
+                print(f"Tangan {kategori}: {count_fingers} jari")
+
+                # --- Logika Pose Khusus ---
+                is_open = all(jari_buka)
+                is_fist = not any(jari_buka)
+                is_peace = (jari_buka[0] and jari_buka[1] and not jari_buka[2] and not jari_buka[3])
+
+                # --- Data Posisi & 3D (Tetap sama) ---
                 x_pos = hand_lms[9].x
                 y_pos = hand_lms[9].y
-                
-                # --- KALKULASI SUDUT HOLOGRAM 3D ---
-                # 1. ROLL (Miring Kiri/Kanan) -> Dihitung dari telunjuk (5) dan kelingking (17)
-                dx_roll = world_lms[17].x - world_lms[5].x
-                dy_roll = world_lms[17].y - world_lms[5].y
-                roll_angle = math.atan2(dy_roll, dx_roll) 
-                
-                # 2. PITCH (Menukik/Mendongak) -> Dihitung dari pergelangan (0) dan jari tengah (9)
-                dz_pitch = world_lms[9].z - world_lms[0].z
-                dy_pitch = world_lms[9].y - world_lms[0].y
-                pitch_angle = math.atan2(dz_pitch, dy_pitch)
+                wrist = world_lms[0]
+                index_mcp = world_lms[5]
+                pinky_mcp = world_lms[17]
 
-                # Kirim data tambahan 'pitch' dan 'roll' ke Godot
+                # 6. Susun Data untuk dikirim ke Godot
                 data_tangan[kategori] = {
-                    "x": x_pos, "y": y_pos, "is_open": is_open,
-                    "pitch": pitch_angle, "roll": roll_angle
+                    "x": x_pos, "y": y_pos, 
+                    "is_open": is_open,
+                    "is_peace": is_peace, 
+                    "is_fist": is_fist,
+                    "fingers": count_fingers,
+                    "w": {"x": wrist.x, "y": wrist.y, "z": wrist.z},
+                    "i": {"x": index_mcp.x, "y": index_mcp.y, "z": index_mcp.z},
+                    "p": {"x": pinky_mcp.x, "y": pinky_mcp.y, "z": pinky_mcp.z}
                 }
 
+                # Gambar dot hijau di layar
                 h, w, c = img.shape
                 cx, cy = int(x_pos * w), int(y_pos * h)
                 cv2.circle(img, (cx, cy), 8, (0, 255, 0), cv2.FILLED)
